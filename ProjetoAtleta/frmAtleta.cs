@@ -32,11 +32,13 @@ namespace ProjetoAtleta
 
                 string y = txtpeso.Text;
                 var p = y.Replace(".", ",");
-                obj.SetPeso(double.Parse(p));
+                var b = p.Replace("-", "");
+                obj.SetPeso(double.Parse(b));
 
                 string x = txtaltura.Text;
                 var o = x.Replace(".", ",");
-                obj.SetAltura(double.Parse(o));
+                var u = o.Replace("-", "");
+                obj.SetAltura(double.Parse(u));
 
                 obj.SetIdade(int.Parse(txtidade.Text));
 
